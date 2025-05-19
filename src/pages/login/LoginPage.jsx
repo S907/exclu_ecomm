@@ -129,7 +129,12 @@ const LoginPage = () => {
       let { data: productDetails, error } = await supabase
         .from('login_product_details')
         .select('*')
-      console.log('productDetails:::::::',productDetails)
+        if(error){
+          throw error
+        }
+        if(productDetails.length>0){
+          console.log('productDetails>>>>>>>>>>',productDetails)
+        }
     }
     getDetails()
   },[])
