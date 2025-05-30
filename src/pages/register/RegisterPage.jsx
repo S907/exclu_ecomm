@@ -1,6 +1,7 @@
 import React from 'react'
 import phnImg from '../../../public/images/screenImg.png'
 import { TextField } from '@mui/material';
+import { Link } from 'react-router';
 
 function RegisterPage() {
 
@@ -18,10 +19,10 @@ function RegisterPage() {
         <div style={{ fontWeight: 'bold', fontSize: 22 }}>Exclusive</div>
         <nav style={stylesSx.nav}>
           <div style={stylesSx.innerNav}>
-            <a href="#" className='nav-link'>Home</a>
-            <a href="#" className='nav-link'>Contact</a>
-            <a href="#" className='nav-link'>About</a>
-            <a href="#" className='nav-link'>Sign Up</a>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/signup" className="nav-link">Sign up</Link>
           </div>
           <input type="text" placeholder="What are you looking for?" style={stylesSx.input} />
         </nav>
@@ -137,20 +138,20 @@ const stylesSx = {
   },
   header: {
     // padding: '15px 30px',
+    // flexWrap: 'wrap',
+    // justifyContent:'space-evenly',
+    // backgroundColor:'red',
     borderBottom: '1px solid #eee',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    // flexWrap: 'wrap',
-    // justifyContent:'space-evenly',
-    // backgroundColor:'red',
     padding: '10px 50px'
   },
   nav: {
+    // backgroundColor:'green',
     display: 'flex',
     gap: 20,
     alignItems: 'center',
-    // backgroundColor:'green',
     flex: 1,
     justifyContent: 'space-evenly'
   },
@@ -171,10 +172,10 @@ const stylesSx = {
   hero: {
     display: 'flex',
     flexWrap: 'wrap',
-    // padding: '40px 20px',
     justifyContent: 'center',
     alignItems: 'center',
     gap: 20
+    // padding: '40px 20px',
     // marginRight:20
     // backgroundColor:'green'
   },
@@ -207,10 +208,10 @@ const stylesSx = {
   sectionBtn: {
     // backgroundColor: 'green',
     // gap:10,
-    display: 'flex',
-    flexDirection: 'column',
     // alignItems: 'center',
     // justifyContent: 'center',
+    display: 'flex',
+    flexDirection: 'column',
     gap: 5,
     height: 200
   },
@@ -245,21 +246,24 @@ const stylesSx = {
   },
   footer: {
     // height:'37vh',
-    backgroundColor: '#000',
     // backgroundColor: 'red',
-    margin: 0,
     // padding: 10px 10px 10px 10px; /* top right bottom left */
+    // padding: '40px 20px',
+    backgroundColor: '#000',
+    margin: 0,
     padding: '10px 10px 10px 10px',
     color: '#fff',
-    // padding: '40px 20px',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     rowGap: 30,
     flexGrow: 1,
+    gap:10,
+    // margin:20
+    padding:30
   },
   column: {
-    flex: '1 1 200px',
+    // flex: '1 1 200px',
   },
   footerHeading: {
     fontWeight: 'bold',
