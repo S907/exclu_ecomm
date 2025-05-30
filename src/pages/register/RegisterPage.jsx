@@ -1,5 +1,7 @@
 import React from 'react'
 import phnImg from '../../../public/images/screenImg.png'
+import { TextField } from '@mui/material';
+
 function RegisterPage() {
 
   return (
@@ -26,7 +28,7 @@ function RegisterPage() {
       </header>
 
       {/* Hero/Login */}
-      <div style={stylesSx.hero}>
+      <section style={stylesSx.hero}>
         <div style={stylesSx.imageWrapper}>
           <img
             src={phnImg}
@@ -35,18 +37,36 @@ function RegisterPage() {
           />
         </div>
         <div style={stylesSx.formWrapper}>
-          <h2>Register</h2>
-          <p>Enter your details below</p>
+          <h2 style={{ fontFamily: 'Poppins-Medium' }}>Create an account</h2>
+          <p style={{ fontFamily: 'Poppins-Light' }}>Enter your details below</p>
           <form style={stylesSx.form}>
-            <input style={stylesSx.input} type="text" placeholder="Email or Phone Number" />
-            <input style={stylesSx.input} type="password" placeholder="Password" />
-            <button style={stylesSx.button}>Register</button>
+            {/* <input style={stylesSx.input} type="text" placeholder="Email or Phone Number" /> */}
+            {/* <input style={stylesSx.input} type="password" placeholder="Password" /> */}
+            {/* <button style={stylesSx.button}>Register</button> */}
             {/* <a href="#" style={{ color: '#db4444', textAlign: 'right' }}>
               Forgot Password?
             </a> */}
+            <section style={{ width: '98%' }}>
+              <TextField id="standard-basic" label="Name" variant="standard" margin="dense" style={{ width: '100%', marginBottom: 20 }} />
+              <TextField id="standard-basic" label="Email or Phone Number" variant="standard" margin="dense" style={{ width: '100%', marginBottom: 20 }} />
+              <TextField id="standard-basic" label="Password" variant="standard" margin="dense" style={{ width: '100%', marginBottom: 20 }} />
+            </section>
+            <section style={stylesSx.sectionBtn}>
+              <div style={stylesSx.sectDiv}>
+                {/* <a style={{color:'#fff',fontFamily:'Poppins-Light'}}>Create Account</a> */}
+                <a style={{ color: '#fff', fontFamily: 'Poppins-Light' }} href="">Create Account</a>
+              </div>
+              <div style={stylesSx.sectDiv2}>
+                <a style={{ color: '#bbb', fontFamily: 'Poppins-Light' }} href="">Sign up with google</a>
+              </div>
+              <div>
+                <p>Already have an account?</p>
+                <p>Log in</p>
+              </div>
+            </section>
           </form>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
       <footer style={stylesSx.footer}>
@@ -124,29 +144,29 @@ const stylesSx = {
     // flexWrap: 'wrap',
     // justifyContent:'space-evenly',
     // backgroundColor:'red',
-    padding:'10px 50px'
+    padding: '10px 50px'
   },
   nav: {
     display: 'flex',
     gap: 20,
     alignItems: 'center',
     // backgroundColor:'green',
-    flex:1,
-    justifyContent:'space-evenly'
+    flex: 1,
+    justifyContent: 'space-evenly'
   },
-  innerNav:{
+  innerNav: {
     // backgroundColor:'white',
     // padding:20
     // width:200
     // flex:1
-    flex:0.5,
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    gap:15
+    flex: 0.5,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 15
   },
-  iconName:{
-    
+  iconName: {
+
   },
   hero: {
     display: 'flex',
@@ -154,12 +174,17 @@ const stylesSx = {
     // padding: '40px 20px',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 20
     // marginRight:20
     // backgroundColor:'green'
   },
   imageWrapper: {
-    flex: '1 1 300px',
+    // flex: '1 1 300px',
+    // flex:1,
     // padding: 20,
+    // backgroundColor:'green',
+    width: '50%',
+    flex: '1 1 300px'
   },
   image: {
     width: '100%',
@@ -168,13 +193,42 @@ const stylesSx = {
   },
   formWrapper: {
     flex: '1 1 300px',
-    padding: 20,
-    maxWidth: 400,
+    // maxWidth: 500,
+    // padding: 20,
+    // backgroundColor:'red'
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
-    gap: 20,
+    width: 500,
+    // backgroundColor:'green',
+    // margin:10
+  },
+  sectionBtn: {
+    // backgroundColor: 'green',
+    // gap:10,
+    display: 'flex',
+    flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    gap: 5,
+    height: 200
+  },
+  sectDiv: {
+    backgroundColor: '#db4444',
+    width: '97%',
+    minHeight: 70,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3
+  },
+  sectDiv2: {
+    backgroundColor: '#fff',
+    width: '97%',
+    minHeight: 70, display: 'flex', justifyContent: 'center',
+    alignItems: 'center', borderRadius: 3,
+    border: '1px solid #ABABAB'
   },
   input: {
     padding: 12,
